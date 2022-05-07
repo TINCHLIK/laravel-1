@@ -81,6 +81,7 @@ class StudentController extends Controller
             'tags'=>'',
             // 'phone'=>['required', 'numeric', new PhoneNumber]
         ]);
+
         $tags = $data['tags'];
         unset($data['tags']);
 
@@ -125,7 +126,7 @@ class StudentController extends Controller
     {
         // $student = Student::findOrFail($id);
         return view('students.show', [
-            'student' => $student
+            'student' => $student,
         ]);
     }
 
